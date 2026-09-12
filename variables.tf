@@ -35,6 +35,13 @@ variable "public_subnet_ids" {
 variable "eks_version" {
   description = "Kubernetes version for the EKS cluster"
   type        = string
+  default     = "1.34"
+}
+
+variable "cluster_admin_arns" {
+  description = "List of IAM role/user ARNs to grant EKS cluster admin access"
+  type        = list(string)
+  default     = []
 }
 
 # -----------------------------------------------------

@@ -100,31 +100,31 @@ variable "deploy_karpenter" {
 variable "vpc_cni_version" {
   description = "Version of the VPC CNI addon"
   type        = string
-  default     = "v1.19.2-eksbuild.1"
+  default     = "v1.23.1-eksbuild.1"
 }
 
 variable "kube_proxy_version" {
   description = "Version of the kube-proxy addon"
   type        = string
-  default     = "v1.31.4-eksbuild.1"
+  default     = "v1.34.6-eksbuild.25"
 }
 
 variable "coredns_version" {
   description = "Version of the CoreDNS addon"
   type        = string
-  default     = "v1.11.4-eksbuild.2"
+  default     = "v1.13.2-eksbuild.24"
 }
 
 variable "pod_identity_agent_version" {
   description = "Version of the EKS Pod Identity Agent addon"
   type        = string
-  default     = "v1.3.5-eksbuild.2"
+  default     = "v1.4.0-eksbuild.2"
 }
 
 variable "ebs_csi_version" {
   description = "Version of the EBS CSI driver addon"
   type        = string
-  default     = "v1.38.1-eksbuild.2"
+  default     = "v1.65.0-eksbuild.2"
 }
 
 variable "karpenter_version" {

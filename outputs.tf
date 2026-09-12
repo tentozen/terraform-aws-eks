@@ -18,7 +18,9 @@ output "cluster_security_group_id" {
   value       = aws_eks_cluster.this.vpc_config[0].cluster_security_group_id
 }
 
-output "karpenter_node_role_name" {
-  description = "Name of the IAM role for Karpenter-managed nodes (empty if Karpenter not deployed)"
-  value       = var.deploy_karpenter ? aws_iam_role.karpenter_node[0].name : ""
+output "node_group_role_name" {
+  description = "Name of the IAM role for the managed node group"
+  value       = aws_iam_role.node_group.name
 }
+
+# karpenter_node_role_name — added in #6 when Karpenter resources are implemented

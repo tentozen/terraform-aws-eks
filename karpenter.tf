@@ -501,6 +501,7 @@ resource "helm_release" "karpenter" {
     aws_eks_access_entry.karpenter_node,
     aws_eks_node_group.this,
     aws_iam_role_policy.karpenter_controller,
+    aws_eks_access_policy_association.cluster_admin,
   ]
 }
 

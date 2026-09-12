@@ -124,5 +124,8 @@ resource "kubernetes_storage_class_v1" "gp3" {
     encrypted = "true"
   }
 
-  depends_on = [aws_eks_addon.ebs_csi]
+  depends_on = [
+    aws_eks_addon.ebs_csi,
+    aws_eks_access_policy_association.cluster_admin,
+  ]
 }

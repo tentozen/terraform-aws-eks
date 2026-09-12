@@ -130,7 +130,7 @@ resource "aws_iam_role_policy" "karpenter_controller" {
           StringLike = {
             "aws:RequestTag/karpenter.sh/nodepool" = "*"
           }
-          ForAllValues__StringEquals = {
+          "ForAllValues:StringEquals" = {
             "aws:TagKeys" = ["karpenter.sh/nodepool", "Name"]
           }
         }

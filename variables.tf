@@ -128,7 +128,7 @@ variable "ebs_csi_version" {
 }
 
 variable "karpenter_version" {
-  description = "Karpenter Helm chart version"
+  description = "Karpenter Helm chart version (must be compatible with eks_version — see research/karpenter-pod-identity.md)"
   type        = string
   default     = "1.1.1"
 }

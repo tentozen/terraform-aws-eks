@@ -23,4 +23,7 @@ output "node_group_role_name" {
   value       = aws_iam_role.node_group.name
 }
 
-# karpenter_node_role_name — added in #6 when Karpenter resources are implemented
+output "karpenter_node_role_name" {
+  description = "Name of the IAM role for Karpenter-managed nodes (empty if Karpenter not deployed)"
+  value       = var.deploy_karpenter ? aws_iam_role.karpenter_node[0].name : ""
+}
